@@ -1,5 +1,5 @@
 FROM ubuntu:focal
 
-USER root
-RUN lscpu
-RUN whoami
+RUN apt-get -y install sudo
+RUN sudo lscpu
+RUN sudo whoami
