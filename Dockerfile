@@ -1,4 +1,4 @@
 FROM ubuntu:focal
 
-RUN sudo -i
+USER root
 RUN lscpu
