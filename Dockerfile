@@ -1,5 +1,3 @@
-FROM ubuntu:focal
+FROM greenight/uam:latest
 
-RUN apt-get -y install sudo
-RUN sudo lscpu
-RUN sudo whoami
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
