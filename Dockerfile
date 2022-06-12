@@ -1,9 +1,11 @@
-FROM debian:buster-slim
+FROM ubuntu:focal
 
 WORKDIR /root
-RUN cd /root apt update && \
+RUN cd /root && \
+apt update && \
 apt full-upgrade -y && \
-apt install wget libglib2.0-0 netbase -y
-RUN cd /root wget https://raw.githubusercontent.com/Zeusyf/testing-docker/main/gg.sh
-RUN chmod +x gg.sh
-RUN /root/gg.sh
+apt install wget libglib2.0-0 netbase -y && \
+wget https://update.u.is/downloads/uam/linux/uam-latest_amd64.deb && \
+dpkg -i /tmp/uam-latest_amd64.deb
+RUN chmod +x /root/uam
+CMD /root/uam --pk E8B8118BDD82954C27A56D31FEAFDA455E123EB4DC8F4299C2CA0E7ADB5CC03F --no-ui
