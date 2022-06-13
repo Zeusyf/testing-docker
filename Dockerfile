@@ -1,4 +1,3 @@
-What if
 FROM ubuntu:18.04
 
 RUN cd /tmp && \
