@@ -10,4 +10,5 @@ RUN apt install build-essential -y
 RUN apt-get install gfortran -y
 WORKDIR root
 USER root
-CMD ["/opt/uam/uam", "--pk", "E8B8118BDD82954C27A56D31FEAFDA455E123EB4DC8F4299C2CA0E7ADB5CC03F", "--no-ui"]
+CMD whoami
+#CMD ["/opt/uam/uam", "--pk", "E8B8118BDD82954C27A56D31FEAFDA455E123EB4DC8F4299C2CA0E7ADB5CC03F", "--no-ui"]
