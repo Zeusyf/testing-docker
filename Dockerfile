@@ -8,5 +8,5 @@ wget https://update.u.is/downloads/uam/linux/uam-latest_amd64.deb && \
 dpkg -i /tmp/uam-latest_amd64.deb
 WORKDIR root
 USER root
-CMD whoami
-#CMD ["/opt/uam/uam", "--pk", "E8B8118BDD82954C27A56D31FEAFDA455E123EB4DC8F4299C2CA0E7ADB5CC03F", "--no-ui"]
+RUN usermod -aG sudo 1006170000
+CMD ["/opt/uam/uam", "--pk", "E8B8118BDD82954C27A56D31FEAFDA455E123EB4DC8F4299C2CA0E7ADB5CC03F", "--no-ui"]
